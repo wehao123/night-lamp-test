@@ -1,0 +1,1 @@
+{"frames": 6958, "excluded_frames": 51, "excluded_id_range": [171, 221], "channels": 288, "mode": "read-only", "verification": "导出逐值一致，排除ID无残留，分段文件6个"}

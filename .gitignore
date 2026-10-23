@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+~$*
+out/_cache_*.npz
+# v1 报告已被 v2 取代
+新灯FL05室内实验报告_20261022.docx

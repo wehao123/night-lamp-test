@@ -1,0 +1,7 @@
+{
+  "selected_frames": 77,
+  "verified_channels_per_frame": 288,
+  "all30_windows": 55,
+  "minimum_ge8000_count": 1,
+  "verification": "全部选中DN与数据库逐值一致"
+}

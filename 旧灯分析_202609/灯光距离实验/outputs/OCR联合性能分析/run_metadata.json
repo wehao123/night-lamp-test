@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "matplotlib": "3.11.2",
+  "full_scale_assumed": 65535,
+  "raw_limit": 52428.0,
+  "N_remaining_offset_assumed": 1000,
+  "core_nm": [
+    420,
+    700
+  ],
+  "extension_nm": [
+    700,
+    720
+  ],
+  "figure_count": 15,
+  "inputs": 32,
+  "verification": "结构、波长匹配、时间、扣暗和CV/SNR恒等式检查通过"
+}

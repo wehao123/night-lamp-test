@@ -1,0 +1,187 @@
+{
+  "fixed_environment_1": {
+    "stable": [
+      {
+        "tol_pct": 5,
+        "stable_start_min": 0.0,
+        "longest_continuous_min": 22.5,
+        "continuous_range_min": [
+          2.8333333333333335,
+          25.333333333333332
+        ]
+      },
+      {
+        "tol_pct": 2,
+        "stable_start_min": 13.0,
+        "longest_continuous_min": 18.499999999999996,
+        "continuous_range_min": [
+          28.666666666666668,
+          47.166666666666664
+        ]
+      },
+      {
+        "tol_pct": 1,
+        "stable_start_min": 36.0,
+        "longest_continuous_min": 11.166666666666664,
+        "continuous_range_min": [
+          36.0,
+          47.166666666666664
+        ]
+      }
+    ],
+    "endpoint_change_pct": {
+      "总量420–700": -3.5652763939306498,
+      "蓝420–500": -1.7596523933539165,
+      "绿500–600": -3.5434930390694563,
+      "红600–700": -4.176222358342063
+    }
+  },
+  "time_interpolated_environment_1_2_3": {
+    "stable": [
+      {
+        "tol_pct": 5,
+        "stable_start_min": 35.0,
+        "longest_continuous_min": 12.166666666666664,
+        "continuous_range_min": [
+          35.0,
+          47.166666666666664
+        ]
+      },
+      {
+        "tol_pct": 2,
+        "stable_start_min": 41.666666666666664,
+        "longest_continuous_min": 8.666666666666671,
+        "continuous_range_min": [
+          48.666666666666664,
+          57.333333333333336
+        ]
+      },
+      {
+        "tol_pct": 1,
+        "stable_start_min": 44.0,
+        "longest_continuous_min": 8.666666666666671,
+        "continuous_range_min": [
+          48.666666666666664,
+          57.333333333333336
+        ]
+      }
+    ],
+    "endpoint_change_pct": {
+      "总量420–700": -8.344425759456186,
+      "蓝420–500": -15.418126119281473,
+      "绿500–600": -8.7730358500284,
+      "红600–700": -5.282398191191318
+    }
+  },
+  "fixed_environment_2": {
+    "stable": [
+      {
+        "tol_pct": 5,
+        "stable_start_min": 0.0,
+        "longest_continuous_min": 22.5,
+        "continuous_range_min": [
+          2.8333333333333335,
+          25.333333333333332
+        ]
+      },
+      {
+        "tol_pct": 2,
+        "stable_start_min": 14.833333333333334,
+        "longest_continuous_min": 18.499999999999996,
+        "continuous_range_min": [
+          28.666666666666668,
+          47.166666666666664
+        ]
+      },
+      {
+        "tol_pct": 1,
+        "stable_start_min": 36.5,
+        "longest_continuous_min": 10.666666666666664,
+        "continuous_range_min": [
+          36.5,
+          47.166666666666664
+        ]
+      }
+    ],
+    "endpoint_change_pct": {
+      "总量420–700": -3.7577240942029744,
+      "蓝420–500": -2.054553133214332,
+      "绿500–600": -3.7528988526012386,
+      "红600–700": -4.232156055266756
+    }
+  },
+  "fixed_mean_environment_2_3": {
+    "stable": [
+      {
+        "tol_pct": 5,
+        "stable_start_min": 0.0,
+        "longest_continuous_min": 22.5,
+        "continuous_range_min": [
+          2.8333333333333335,
+          25.333333333333332
+        ]
+      },
+      {
+        "tol_pct": 2,
+        "stable_start_min": 14.833333333333334,
+        "longest_continuous_min": 18.499999999999996,
+        "continuous_range_min": [
+          28.666666666666668,
+          47.166666666666664
+        ]
+      },
+      {
+        "tol_pct": 1,
+        "stable_start_min": 36.5,
+        "longest_continuous_min": 10.666666666666664,
+        "continuous_range_min": [
+          36.5,
+          47.166666666666664
+        ]
+      }
+    ],
+    "endpoint_change_pct": {
+      "总量420–700": -3.746306267061772,
+      "蓝420–500": -2.040561372764438,
+      "绿500–600": -3.741171534010368,
+      "红600–700": -4.224362720687358
+    }
+  },
+  "time_interpolated_environment_2_3_only": {
+    "stable": [
+      {
+        "tol_pct": 5,
+        "stable_start_min": 0.0,
+        "longest_continuous_min": 22.5,
+        "continuous_range_min": [
+          2.8333333333333335,
+          25.333333333333332
+        ]
+      },
+      {
+        "tol_pct": 2,
+        "stable_start_min": 12.5,
+        "longest_continuous_min": 18.499999999999996,
+        "continuous_range_min": [
+          28.666666666666668,
+          47.166666666666664
+        ]
+      },
+      {
+        "tol_pct": 1,
+        "stable_start_min": 34.833333333333336,
+        "longest_continuous_min": 12.333333333333329,
+        "continuous_range_min": [
+          34.833333333333336,
+          47.166666666666664
+        ]
+      }
+    ],
+    "endpoint_change_pct": {
+      "总量420–700": -3.3970100388248547,
+      "蓝420–500": -1.243021263111288,
+      "绿500–600": -3.381898790289084,
+      "红600–700": -4.013810175893518
+    }
+  }
+}

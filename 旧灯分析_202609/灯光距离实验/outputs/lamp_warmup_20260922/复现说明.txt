@@ -1,0 +1,4 @@
+Python 3.12 或更高版本；依赖 numpy、pandas、matplotlib、Pillow。
+运行 analyze.py。需要Windows微软雅黑字体C:/Windows/Fonts/msyh.ttc；其他平台请替换字体路径。
+原始实验目录存在时使用原始目录；不存在时使用随包raw快照。分析始终保留全部帧，不补亮场空档。
+报告中的允许误差为本次分析场景，不是用户指定的验收标准。

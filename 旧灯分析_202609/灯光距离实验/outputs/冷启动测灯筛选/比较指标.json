@@ -1,0 +1,65 @@
+{
+  "total_lamp_frames": 6958,
+  "excluded_capture_ids": [
+    171,
+    221
+  ],
+  "excluded_frame_count": 51,
+  "raw_core_change_pct": -3.0844029123145655,
+  "offset1000_sensitivity_change_pct": -3.2912175736246607,
+  "mean_peak_change_pct": -3.2605254833035446,
+  "first_window": {
+    "n": 71,
+    "start": "2026-09-20T14:29:03.975+08:00",
+    "end": "2026-09-20T14:29:33.845+08:00",
+    "first_id": 36,
+    "last_id": 106,
+    "duration_s": 29.870207,
+    "core_mean": 1989231.295774648,
+    "core_CV_pct": 0.08759231443177753,
+    "fitted_change_pct": -0.12999470341989028,
+    "detrended_CV_pct": 0.07878263963892448,
+    "peak_median": 32737
+  },
+  "last_window": {
+    "n": 49,
+    "start": "2026-09-20T15:31:51.495+08:00",
+    "end": "2026-09-20T15:32:14.079+08:00",
+    "first_id": 7108,
+    "last_id": 7156,
+    "duration_s": 22.584155,
+    "core_mean": 1927875.387755102,
+    "core_CV_pct": 0.07242893218478676,
+    "fitted_change_pct": -0.042502726348939035,
+    "detrended_CV_pct": 0.07131981613603586,
+    "peak_median": 31664
+  },
+  "first5_observed": {
+    "n": 400,
+    "start": "2026-09-20T14:29:03.975+08:00",
+    "end": "2026-09-20T14:34:03.687+08:00",
+    "first_id": 36,
+    "last_id": 518,
+    "duration_s": 299.712008,
+    "core_mean": 1977483.09,
+    "core_CV_pct": 0.3386300836117464,
+    "fitted_change_pct": -0.9836975155536737,
+    "detrended_CV_pct": 0.10471716880942263,
+    "peak_median": 32587.0
+  },
+  "late5_observed": {
+    "n": 648,
+    "start": "2026-09-20T15:21:00.061+08:00",
+    "end": "2026-09-20T15:25:59.586+08:00",
+    "first_id": 6396,
+    "last_id": 7043,
+    "duration_s": 299.524938,
+    "core_mean": 1931753.5787037036,
+    "core_CV_pct": 0.08848507536061154,
+    "fitted_change_pct": -0.11500345947604088,
+    "detrended_CV_pct": 0.08205757804168981,
+    "peak_median": 31708.0
+  },
+  "core_channel_count": 125,
+  "note": "全程主指标为原始导出N码值的420–700nm通道和，未扣同期环境光；反映测量链响应，不直接等同灯的净输出。"
+}

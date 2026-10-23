@@ -1,0 +1,9 @@
+{
+  "source_db": "C:\\Users\\haowei\\Desktop\\夜间水质资料\\夜间水质资料\\标定上位机V3\\标定上位机V3\\data\\2026-09-20.db",
+  "source_sha256": "0d003b3f2a12bdcf481dddb786daa943ee25afaf6b17db550d6b3ceb833a89d4",
+  "selected_frames": 197,
+  "groups": 5,
+  "verification": "5组197帧的全部288通道与数据库逐值一致",
+  "source_access": "read-only",
+  "timezone": "UTC+08:00"
+}

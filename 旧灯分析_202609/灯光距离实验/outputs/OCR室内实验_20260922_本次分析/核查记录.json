@@ -1,0 +1,59 @@
+{
+  "source_files_unchanged": 32,
+  "png_verified": 12,
+  "svg_count": 12,
+  "report_local_links_verified": 60,
+  "csv_count": 12,
+  "formula_spotchecks": "30 SNR calculations and CV reciprocity passed in analysis script",
+  "visual_review": "all 12 charts inspected; missing font glyph corrected",
+  "image_sizes": {
+    "01_六组线性度原始响应比.png": [
+      3325,
+      1345
+    ],
+    "02_六组线性度锚定对比.png": [
+      2665,
+      1345
+    ],
+    "03_六组光谱实测与理论对比.png": [
+      3325,
+      1785
+    ],
+    "04_波长偏差及偏置敏感性.png": [
+      2885,
+      1785
+    ],
+    "05_各积分时间信噪比.png": [
+      3545,
+      1125
+    ],
+    "06_全波段工作条件图.png": [
+      3104,
+      1345
+    ],
+    "07_固定64ms弱光响应与CV.png": [
+      3105,
+      1125
+    ],
+    "08_延长积分时间改善.png": [
+      3105,
+      1125
+    ],
+    "09_暗场均值与噪声.png": [
+      3105,
+      1125
+    ],
+    "10_采集期间漂移.png": [
+      2885,
+      1785
+    ],
+    "11_降电压谱形检查.png": [
+      3105,
+      1125
+    ],
+    "12_各电压有效通道数.png": [
+      3105,
+      1125
+    ]
+  }
+}

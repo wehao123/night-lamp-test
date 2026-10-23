@@ -1,0 +1,103 @@
+== 数据库表结构 ==
+-- probes  (1 行)
+CREATE TABLE probes (
+                        probe_id INTEGER PRIMARY KEY,
+                        probe_type TEXT NOT NULL,
+                        serial_number TEXT NOT NULL,
+                        created_at TEXT NOT NULL,
+                        UNIQUE(probe_type, serial_number)
+                    )
+-- calibrations  (2 行)
+CREATE TABLE calibrations (
+                        calibration_id INTEGER PRIMARY KEY,
+                        probe_id INTEGER NOT NULL,
+                        calibration_date TEXT,
+                        calibration_paths TEXT,
+                        info TEXT,
+                        wavelengths TEXT,
+                        start_index INTEGER,
+                        dn_num INTEGER,
+                        physical_quantity TEXT,
+                        unit TEXT,
+                        is_active BOOLEAN DEFAULT 1,
+                        FOREIGN KEY (probe_id) REFERENCES probes (probe_id) ON DELETE CASCADE
+                    )
+-- raw_data  (0 行)
+CREATE TABLE raw_data (
+                        raw_data_id INTEGER PRIMARY KEY,
+                        raw_content BLOB
+                    )
+-- spectra_dn  (10185 行)
+CREATE TABLE spectra_dn (
+                        spectra_dn_id INTEGER PRIMARY KEY,
+                        calibration_id INTEGER NOT NULL,
+                        integration_time_ms REAL,
+                        dn_capture_mode TEXT,
+                        dn_values TEXT NOT NULL,
+                        FOREIGN KEY (calibration_id) REFERENCES calibrations (calibration_id)
+                    )
+-- spectra_phy  (10185 行)
+CREATE TABLE spectra_phy (
+                        spectra_phy_id INTEGER PRIMARY KEY,
+                        calibration_id INTEGER NOT NULL,
+                        integration_time_ms REAL,
+                        phy_values TEXT NOT NULL,
+                        FOREIGN KEY (calibration_id) REFERENCES calibrations (calibration_id)
+                    )
+-- capture_batches  (10197 行)
+CREATE TABLE capture_batches (
+                        batch_id INTEGER PRIMARY KEY,
+                        timestamp TEXT NOT NULL
+                    )
+-- captures  (10185 行)
+CREATE TABLE captures (
+                        capture_id INTEGER PRIMARY KEY,
+                        probe_id INTEGER NOT NULL,
+                        capture_batch_id INTEGER,
+                        timestamp TEXT NOT NULL,
+                        raw_data_id INTEGER,
+                        spectra_dn_id INTEGER,
+                        spectra_phy_id INTEGER,
+                        FOREIGN KEY (probe_id) REFERENCES probes (probe_id) ON DELETE CASCADE,
+                        FOREIGN KEY (raw_data_id) REFERENCES raw_data (raw_data_id) ON DELETE SET NULL,
+                        FOREIGN KEY (spectra_dn_id) REFERENCES spectra_dn (spectra_dn_id) ON DELETE SET NULL,
+                        FOREIGN KEY (spectra_phy_id) REFERENCES spectra_phy (spectra_phy_id) ON DELETE SET NULL,
+                        FOREIGN KEY (capture_batch_id) REFERENCES capture_batches (batch_id) ON DELETE SET NULL
+                    )
+
+probes:
+   probe_id probe_type serial_number                        created_at
+0         1        IEP    IEP_O2N9DA  2026-10-22T12:13:35.111100+00:00
+
+calibrations:
+   calibration_id  probe_id                  calibration_date                                  calibration_paths                   info  start_index  dn_num physical_quantity           unit  is_active
+0               1         1  2026-10-22T12:13:35.127112+00:00                                                NaN  IEP_Native_IEP_O2N9DA            1     256          Radiance  mW/(m² nm Sr)          0
+1               2         1               2026-10-14 17:44:32  ["cal\\iep\\IEP-IEP_O2N9DA_Cal_by_Lamp2501.json"]                   标定文件            1     256          Radiance  mW/(m² nm Sr)          1
+
+探头 IEP_O2N9DA 全部帧数: 10185；时间 2026-10-22T12:14:38.182460+00:00 – 2026-10-22T15:57:13.652841+00:00
+各积分时间/模式帧数:
+calibration_id  integration_time_ms  dn_capture_mode
+2               128.0                S                     33
+                256.0                S                     30
+                512.0                S                  10046
+                1024.0               S                     54
+                2048.0               R                      4
+                4096.0               R                     18
+
+== 与 CSV 导出逐帧校验 ==
+DN IEP-IEP_O2N9DA-2-DN_1792671309.csv: CSV 4 帧，时间 2026-10-22T12:14:38.182460+00:00 – 2026-10-22T12:14:51.443623+00:00；库中缺 0 帧；波长一致=True；积分时间一致=True；模式一致=True；数值完全一致=True（最大差 0.0） → 通过
+PHY IEP-IEP_O2N9DA-2-PHY_1792671309.csv: CSV 4 帧，时间 2026-10-22T12:14:38.182460+00:00 – 2026-10-22T12:14:51.443623+00:00；库中缺 0 帧；波长一致=True；积分时间一致=True；模式一致=True；数值完全一致=True（最大差 4.440892098500626e-16） → 通过
+
+== 导出 UTC 2026-10-22T12:40:00 – 2026-10-22T15:59:59.999 ==  帧数 10059
+其中各积分时间/模式帧数:
+integration_time_ms  dn_capture_mode
+512.0                S                  10016
+1024.0               S                     41
+4096.0               R                      2
+相邻帧间隔 > 10 s 的空档（北京时间）:
+  20:42:20.000 → 20:46:25.950  （246.0 s）
+  20:46:51.929 → 20:50:32.290  （220.4 s）
+  22:42:55.926 → 23:09:15.131  （1579.2 s）
+  23:32:02.081 → 23:35:15.771  （193.7 s）
+  23:56:38.816 → 23:57:05.142  （26.3 s）
+已写出 data/ 下存档 CSV。
